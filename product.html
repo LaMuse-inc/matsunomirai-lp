@@ -14,12 +14,12 @@
   <link rel="icon" href="assets/images/top_img/favicon.png">
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/css/
-  6-1-8.css">
+  <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/css/6-1-8.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&
-  display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/product.css">
 </head>
@@ -27,151 +27,459 @@
   <header id="header">
     <div class="header-inner">
       <div class="header-title">
-    <a href="index.html"><img src="assets/images/header_img/logo.png" alt="ロゴ"></a>
-     <h1>マツノミライ</h1>
+        <a href="index.html" class="header-logo-link">
+          <img src="assets/images/header_img/logo_image.png" alt="マツノミライロゴ">
+          <span class="company-name">マツノミライ</span>
+        </a>
       </div>
-      <!-- /.header-title -->
-     <div class="header-site-menu">
-      <div id="nav-drawer">
-        <input id="nav-input" class="none" type="checkbox">
-        <label id="nav-open" for="nav-input"><span></span></label>
-        <label id="nav-close" class="none" for="nav-input"></label>
-    <nav id="nav-content" class="header__navigation">
-      <ul>
-        <li><a href="matuba.html">松葉について</a></li>
-        <li><a href="company.html">会社概要</a></li>
-        <li><a href=product.html>製品紹介</a></li>
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
-        <li class="menu-none">
-          <a class="nav-drawer__link-instagram" href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==">
-            <img src="assets/images/footer_img/footer1.png" alt="インスタグラム">
-          </a>
-        </li>
-        <li class="menu-none">
-          <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342"><img src="assets/images/footer_img/footer2.png" alt="フェイスブック">
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- /#nav-drawer -->
-  </div>
-   <!-- /.header-site-menu -->
-  </div>
-   <!-- /.header-inner -->
+      <div class="header-site-menu">
+        <div id="nav-drawer">
+          <input id="nav-input" class="none" type="checkbox">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label id="nav-close" class="none" for="nav-input"></label>
+          <nav id="nav-content" class="header__navigation">
+            <ul>
+              <li><a href="matuba.html">松葉について</a></li>
+              <li><a href="company.html">会社概要</a></li>
+              <li><a href="product.html">製品紹介</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
+              <li class="menu-none">
+                <a class="nav-drawer__link-instagram" href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==">
+                  <img src="assets/images/footer_img/footer1.png" alt="インスタグラム">
+                </a>
+              </li>
+              <li class="menu-none">
+                <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342">
+                  <img src="assets/images/footer_img/footer2.png" alt="フェイスブック">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-<!-- 製品説明  -->
-<section id="product" class="fadein">
-  <div class="shadow">
-    <div class="wrapper fadein">
-      <div class="product-title wrapper fadein">
-        <h2 class="font-en">product</h2>
-        <p>製品</p>
-     </div>
-     <div class="product-txt fadein">
-      <h2>マツノミライ製品について</h2>
-      <p class="txt fadein">マツノミライの松葉製品は桜井海岸に生えている松から <br>
-        落ちた松葉を使用しているため化学処理をされたものは <br>
-        一切使用しておりません。</p>
-     </div>
-  <!-- /.product-title -->
-  </div>  
-  <!-- /.wrapper -->
-  </div>
-  <!-- /.shadow -->
-</section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-title">
+            <span class="hero-en">product</span>
+            <span class="hero-ja">製品紹介</span>
+          </div>
+          <p class="hero-description">
+            廃棄予定の松葉を製品に生き返らせ、皆様のもとへお届けします
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- 製品 -->
-<section id="product-item" class="wrapper">
- <div class="item-list fadein">
-  <ul>
-    <li>
-     <h2 class="fadein">マツノミライ松葉ペレット</h2>
-     <img class="image fadein" src="assets/images/product_img/product03.png" alt="松葉ペレット">
-     <p class="pay fadein">価格　<span class="font-en">500</span>円/袋 (税込み) <br>
-       重量　<span class="font-en">500g</span>　</p>
-     <p class="fadein">火持ちが良いためキャンパーの方やペレット <br>
-       ストーブをお持ちの方がよくお求めになりま <br>
-       す。<br>
-       <span class="red">製品の発送は実施しておりません。</span></p>
-   </li>
-   <li>
-    <h2 class="fadein">マツノミライ入浴剤</h2>
-    <img class="image fadein" src="assets/images/product_img/product04.png" alt="松葉茶仮">
-    <p class="pay fadein">価格　未定円/袋 (税込み) <br>
-      重量　未定g　</p>
-    <p class="fadein">
-      <p class="fadein">
-        <span class="red">ただいま準備中です！</span></p>
-    </p>
-  </li>
-</ul>
-</div>
-<!-- /.item-list -->
-</section>
+    <!-- Product Overview Section -->
+    <section class="product-overview-section">
+      <div class="container">
+        <div class="section-title">
+          <span class="title-en">about our products</span>
+          <span class="title-ja">マツノミライ製品について</span>
+        </div>
+        <p class="overview-description">
+          マツノミライの松葉製品は桜井海岸に生えている松から落ちた松葉を使用しているため、化学処理をされたものは一切使用しておりません。自然の恵みをそのままお届けします。
+        </p>
+        <div class="quality-badges">
+          <div class="badge-item">
+            <div class="badge-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>100%天然素材</h3>
+            <p>化学処理を一切行わない、自然のままの松葉を使用</p>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h3>環境に優しい</h3>
+            <p>廃棄される松葉を有効活用し、環境負荷を軽減</p>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>地域密着</h3>
+            <p>愛媛県今治市桜井海岸の松葉のみを使用</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Featured Products Section -->
+    <section class="featured-products-section">
+      <div class="container">
+        <div class="section-title">
+          <span class="title-en">our products</span>
+          <span class="title-ja">製品ラインナップ</span>
+        </div>
+        <div class="products-grid">
+          <!-- Product 1: 松葉ペレット -->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="assets/images/product_img/product03.png" alt="マツノミライ松葉ペレット" class="product-image">
+              <div class="product-badges">
+                <span class="badge bestseller">人気商品</span>
+                <span class="badge natural">天然素材</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <h2 class="product-title">マツノミライ松葉ペレット</h2>
+              <p class="product-category">燃料・アウトドア用品</p>
+              <div class="product-features">
+                <span class="feature-tag">
+                  <i class="fas fa-fire"></i>
+                  火持ち良好
+                </span>
+                <span class="feature-tag">
+                  <i class="fas fa-mountain"></i>
+                  キャンプ最適
+                </span>
+                <span class="feature-tag">
+                  <i class="fas fa-home"></i>
+                  ペレットストーブ対応
+                </span>
+              </div>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-label">重量</span>
+                  <span class="spec-value font-en">500g</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">素材</span>
+                  <span class="spec-value">100%天然松葉</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">産地</span>
+                  <span class="spec-value">愛媛県今治市桜井海岸</span>
+                </div>
+              </div>
+              <div class="product-price-section">
+                <div class="price-info">
+                  <span class="price font-en">¥500</span>
+                  <span class="price-unit">/ 袋（税込）</span>
+                </div>
+                <div class="shipping-note">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <span>製品の発送は実施しておりません</span>
+                </div>
+              </div>
+              <div class="product-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="btn btn-primary">
+                  <i class="fas fa-shopping-cart"></i>
+                  購入のお問い合わせ
+                </a>
+                <button class="btn btn-secondary" onclick="toggleDetails('pellet-details')">
+                  <i class="fas fa-info-circle"></i>
+                  詳細を見る
+                </button>
+              </div>
+            </div>
+          </div>
 
-<!-- お問い合わせ -->
-<section id="contact">
-  <div class="shadow-second">
-  <div class="contact-title wrapper">
-    <h2 class="font-en">CONTACT</h2>
-    <p class="contact-txt"> 
-      ご質問・ご相談についてはお気軽に <br>
-      お問い合わせください。
-    </p>
-    <p class="contact-txt-second">対応可能日　(土・日含む)　 <br class="br-sp"><span class="font-en">06:00～23:00</span></p>
-  
-  <!-- contact text -->
-    <div class="contact-button">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="button-link primary-button">
-        <span  class="font-en">let’s see</span>
-      </a>
-     </div> 
+          <!-- Product 2: 入浴剤（準備中） -->
+          <div class="product-card coming-soon">
+            <div class="product-image-container">
+              <img src="assets/images/product_img/product04.png" alt="マツノミライ入浴剤" class="product-image">
+              <div class="product-badges">
+                <span class="badge coming-soon">準備中</span>
+                <span class="badge natural">天然素材</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <h2 class="product-title">マツノミライ入浴剤</h2>
+              <p class="product-category">健康・美容用品</p>
+              <div class="product-features">
+                <span class="feature-tag">
+                  <i class="fas fa-spa"></i>
+                  リラックス効果
+                </span>
+                <span class="feature-tag">
+                  <i class="fas fa-leaf"></i>
+                  天然成分
+                </span>
+                <span class="feature-tag">
+                  <i class="fas fa-heart"></i>
+                  肌に優しい
+                </span>
+              </div>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-label">重量</span>
+                  <span class="spec-value">未定</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">素材</span>
+                  <span class="spec-value">松葉エキス配合</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">香り</span>
+                  <span class="spec-value">天然松の香り</span>
+                </div>
+              </div>
+              <div class="product-price-section">
+                <div class="price-info">
+                  <span class="price">価格未定</span>
+                </div>
+                <div class="development-status">
+                  <i class="fas fa-clock"></i>
+                  <span>ただいま準備中です！</span>
+                </div>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-disabled" disabled>
+                  <i class="fas fa-clock"></i>
+                  開発中
+                </button>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="btn btn-outline">
+                  <i class="fas fa-bell"></i>
+                  発売通知を希望
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Products Placeholder -->
+          <div class="product-card placeholder">
+            <div class="product-image-container">
+              <div class="placeholder-image">
+                <i class="fas fa-seedling"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h2 class="product-title">その他の製品</h2>
+              <p class="product-category">開発予定</p>
+              <div class="future-products-list">
+                <ul>
+                  <li>松葉茶</li>
+                  <li>松葉アロマオイル</li>
+                  <li>松葉肥料</li>
+                  <li>その他の松葉製品</li>
+                </ul>
+              </div>
+              <div class="product-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="btn btn-outline">
+                  <i class="fas fa-lightbulb"></i>
+                  ご要望・ご提案
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-title">
+          <span class="title-en">benefits</span>
+          <span class="title-ja">松葉製品の特長</span>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-fire"></i>
+            </div>
+            <h3>優れた燃焼性能</h3>
+            <p>松葉ペレットは火持ちが良く、安定した燃焼を続けます。キャンプやペレットストーブに最適です。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>環境に配慮</h3>
+            <p>廃棄される松葉を活用することで、環境負荷を軽減し、持続可能な社会に貢献します。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>安全・安心</h3>
+            <p>化学処理を一切行わない天然素材のため、安心してお使いいただけます。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>地域貢献</h3>
+            <p>地域の環境問題解決に取り組み、松林の維持管理に携わる方々を支援します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section class="usage-section">
+      <div class="container">
+        <div class="section-title">
+          <span class="title-en">how to use</span>
+          <span class="title-ja">使用方法</span>
+        </div>
+        <div class="usage-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="showTab('pellet-usage')">
+              <i class="fas fa-fire"></i>
+              ペレットの使い方
+            </button>
+            <button class="tab-btn" onclick="showTab('bath-usage')">
+              <i class="fas fa-spa"></i>
+              入浴剤の使い方
+            </button>
+          </div>
+          <div class="tab-content">
+            <div id="pellet-usage" class="tab-pane active">
+              <div class="usage-grid">
+                <div class="usage-item">
+                  <div class="usage-icon">
+                    <i class="fas fa-campground"></i>
+                  </div>
+                  <h4>キャンプファイヤー</h4>
+                  <p>薪と一緒に使用することで、長時間安定した炎を維持できます</p>
+                </div>
+                <div class="usage-item">
+                  <div class="usage-icon">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <h4>ペレットストーブ</h4>
+                  <p>一般的なペレットストーブでそのままご使用いただけます</p>
+                </div>
+                <div class="usage-item">
+                  <div class="usage-icon">
+                    <i class="fas fa-temperature-high"></i>
+                  </div>
+                  <h4>BBQグリル</h4>
+                  <p>炭と混ぜて使用することで、独特の香りをお楽しみいただけます</p>
+                </div>
+              </div>
+            </div>
+            <div id="bath-usage" class="tab-pane">
+              <div class="coming-soon-message">
+                <i class="fas fa-hourglass-half"></i>
+                <h4>入浴剤は現在開発中です</h4>
+                <p>より良い製品をお届けするため、現在開発を進めております。完成まで今しばらくお待ちください。</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="btn btn-primary">
+                  発売通知を希望する
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title font-en">CONTACT</h2>
+          <p class="cta-description">
+            製品に関するご質問や購入についてはお気軽にお問い合わせください。
+          </p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-phone"></i>
+              <div class="method-info">
+                <h4>お電話でのお問い合わせ</h4>
+                <p class="font-en">090-2824-2111</p>
+                <p class="hours">06:00～23:00（土日祝含む）</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <div class="method-info">
+                <h4>メールでのお問い合わせ</h4>
+                <p class="font-en">i.syoma.1008@gmail.com</p>
+                <p class="hours">24時間受付</p>
+              </div>
+            </div>
+          </div>
+          <div class="cta-button">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="button-link">
+              <i class="fas fa-paper-plane"></i>
+              <span class="font-en">お問い合わせフォーム</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">マツノミライ</div>
+          <p class="footer-description">
+            廃棄松葉から始まる持続可能な未来づくり。愛媛県今治市から、環境と共生する社会を目指します。
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61556591608342" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>ナビゲーション</h4>
+            <ul>
+              <li><a href="matuba.html">松葉について</a></li>
+              <li><a href="company.html">会社概要</a></li>
+              <li><a href="product.html">製品紹介</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>ポリシー</h4>
+            <ul>
+              <li><a href="personal.html">プライバシーポリシー</a></li>
+              <li><a href="policy.html">サイトポリシー</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright font-en">&copy; 2024 Matunomirai Corp. All rights reserved.</p>
+      </div>
     </div>
-  </div>
-</section>
-</main>  
-<footer id="footer">
-<div class="footer-list wrapper">
-  <div class="footer-flex">
-  <div>
-  <ul class="footer-navi">
-    <li><a href="matuba.html">松葉について</a></li>
-    <li><a href="company.html">会社概要</a></li>
-    <li><a href="product.html">製品紹介</a></li>
-    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
-    <li><a href="personal.html">プライバシーポリシー</a></li>
-    <li><a href="policy.html">サイトポリシー</a></li>
-  </ul>
-</div>
-<div>
-  <ul class="icon-navi">
-        <li><a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" ><img src="assets/images/footer_img/footer1.png" alt="instagram"></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61556591608342"><img src="assets/images/footer_img/footer2.png" alt="facebook"></a></li>
-  </ul>
-</div>
-</div>
-<p class="copyright font-en">&copy; 2024  Matunomirai Corp.</p>
-</div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="assets/js/matu.js"></script>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/matu.js"></script>
+  <script>
+    // Tab switching functionality
+    function showTab(tabId) {
+      // Hide all tab panes
+      document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.remove('active');
+      });
+      
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show selected tab pane
+      document.getElementById(tabId).classList.add('active');
+      
+      // Add active class to clicked button
+      event.target.closest('.tab-btn').classList.add('active');
+    }
+    
+    // Product details toggle (placeholder function)
+    function toggleDetails(detailsId) {
+      alert('製品詳細は開発中です。お問い合わせフォームよりご連絡ください。');
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

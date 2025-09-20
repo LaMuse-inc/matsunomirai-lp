@@ -27,50 +27,46 @@
     <div class="header-inner">
       <div class="header-title">
         <a href="index.html" class="header-logo-link">
-          <img src="assets/images/header_img/logo_image.png" alt="ロゴ">
+          <img src="assets/images/header_img/logo_image.png" alt="マツノミライロゴ">
           <span class="company-name">マツノミライ</span>
         </a>
       </div>
-      <!-- /.header-title -->
       <!-- Desktop Navigation -->
       <nav class="header__navigation">
         <ul>
           <li><a href="matuba.html">松葉について</a></li>
           <li><a href="company.html">会社概要</a></li>
           <li><a href="product.html">製品紹介</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=pp_url" target="_blank">お問い合わせ</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
         </ul>
       </nav>
-
       <!-- Mobile Navigation -->
       <div class="header-site-menu">
         <div id="nav-drawer">
           <input id="nav-input" class="none" type="checkbox">
           <label id="nav-open" for="nav-input"><span></span></label>
           <label id="nav-close" class="none" for="nav-input"></label>
-          <nav id="nav-content">
+          <nav id="nav-content" class="header__navigation">
             <ul>
               <li><a href="matuba.html">松葉について</a></li>
               <li><a href="company.html">会社概要</a></li>
               <li><a href="product.html">製品紹介</a></li>
-              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=pp_url" target="_blank">お問い合わせ</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
               <li class="menu-none">
                 <a class="nav-drawer__link-instagram" href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
               <li class="menu-none">
-                <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342"><i class="fab fa-facebook-f"></i>
+                <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342">
+                  <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
             </ul>
           </nav>
         </div>
-        <!-- /#nav-drawer -->
       </div>
-      <!-- /.header-site-menu -->
-  </div>
-   <!-- /.header-inner -->
+    </div>
   </header>
 
   <main>
@@ -283,23 +279,95 @@
   </a>
  </div> 
 </section>
-<!-- お問い合わせ -->
-<section id="contact">
-  <div class="shadow-second">
-  <div class="contact-title wrapper">
-    <h2 class="font-en">CONTACT</h2>
-    <p class="contact-txt"> 
-      ご質問・ご相談についてはお気軽に <br>
-      お問い合わせください。
+<!-- お問い合わせフォーム -->
+<section id="contact" class="contact-form-section">
+  <div class="container">
+    <div class="section-title">
+      <span class="title-en">CONTACT</span>
+      <span class="title-ja">お問い合わせ</span>
+    </div>
+    <p class="contact-description">
+      製品のご購入から事業に関するご質問まで、お気軽にお問い合わせください。<br>
+      <span class="contact-hours">対応可能時間：06:00〜23:00（土日祝日含む）</span>
     </p>
-    <p class="contact-txt-second">対応可能日　(土・日含む)　 <br class="br-sp"><span class="font-en">06:00～23:00</span></p>
-  
-  <!-- contact text -->
-    <div class="contact-button">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="button-link primary-button">
-        <span class="font-en">let's see</span>
-      </a>
-     </div> 
+
+    <div class="contact-content">
+      <!-- Quick Contact Methods -->
+      <div class="quick-contact-grid">
+        <div class="contact-method-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>お電話でのお問い合わせ</h3>
+          <p class="contact-number">090-2824-2111</p>
+          <p class="contact-time">即座にご対応いたします</p>
+        </div>
+        
+        <div class="contact-method-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>メールでのお問い合わせ</h3>
+          <p class="contact-email">i.syoma.1008@gmail.com</p>
+          <p class="contact-time">24時間以内にご返信</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h3 class="form-title">フォームでのお問い合わせ</h3>
+        <p class="form-description">下記フォームにご入力いただき、送信してください。内容を確認次第、ご連絡いたします。</p>
+        
+        <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/formResponse" method="POST" target="_blank">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">お名前 <span class="required">*</span></label>
+              <input type="text" id="name" name="entry.2005620554" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
+              <input type="email" id="email" name="entry.1045781291" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone" class="form-label">電話番号</label>
+              <input type="tel" id="phone" name="entry.1166974658" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">お問い合わせ種別 <span class="required">*</span></label>
+              <select id="subject" name="entry.839337160" class="form-input" required>
+                <option value="">選択してください</option>
+                <option value="製品について">製品について</option>
+                <option value="購入について">購入について</option>
+                <option value="事業について">事業について</option>
+                <option value="取材・メディア">取材・メディア</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">お問い合わせ内容 <span class="required">*</span></label>
+            <textarea id="message" name="entry.1677159064" class="form-textarea" rows="6" placeholder="具体的なお問い合わせ内容をご記入ください" required></textarea>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy" class="checkbox-label">
+              <a href="personal.html" target="_blank">プライバシーポリシー</a>に同意します <span class="required">*</span>
+            </label>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="submit-button">
+              <i class="fas fa-paper-plane"></i>
+              送信する
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
