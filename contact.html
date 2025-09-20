@@ -10,9 +10,13 @@
  <meta property="og:title" content="お問い合せ｜株式会社マツノミライ" />
  <meta property="og:description" content="製品の購入から事業に関するご質問まで是非お気軽にお問い合わせください。" />
  <meta property="og:site_name" content="株式会社マツノミライ" />
- <meta property="og:image" content="https://matunomirai.sakura.ne.jp/assets/images/header_img/logo2.png" />
-  <link rel="icon" href="assets/images/top_img/favicon.png">
+ <meta property="og:image" content="https://matunomirai.sakura.ne.jp/assets/images/header_img/logo_image.png" />
+    <link rel="icon" href="assets/images/header_img/logo_image.png">
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/contact.css">
 </head>
@@ -20,8 +24,10 @@
   <header id="header">
     <div class="header-inner">
       <div class="header-title">
-    <a href="index.html"><img src="assets/images/header_img/logo.png" alt="ロゴ"></a>
-     <h1>マツノミライ</h1>
+        <a href="index.html" class="header-logo-link">
+          <img src="assets/images/header_img/logo_image.png" alt="ロゴ">
+          <span class="company-name">マツノミライ</span>
+        </a>
       </div>
       <!-- /.header-title -->
      <div class="header-site-menu">
@@ -34,14 +40,14 @@
         <li><a href="matuba.html">松葉について</a></li>
         <li><a href="company.html">会社概要</a></li>
         <li><a href=product.html>製品紹介</a></li>
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
+        <li><a href="contact.html" class="current">お問い合わせ</a></li>
         <li class="menu-none">
           <a class="nav-drawer__link-instagram" href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==">
-            <img src="assets/images/footer_img/footer1.png" alt="インスタグラム">
+            <i class="fab fa-instagram"></i>
           </a>
         </li>
         <li class="menu-none">
-          <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342"><img src="assets/images/footer_img/footer2.png" alt="フェイスブック">
+          <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342"><i class="fab fa-facebook-f"></i>
           </a>
         </li>
       </ul>
@@ -55,72 +61,295 @@
   </header>
 
   <main>
-<!-- お問い合わせ  -->
-<section id="contact" class="wrapper">
- <div class="contact-title">
-  <h2 class="font-en">contact</h2>
-  <p>お問い合わせ</p>
- </div>
- <!-- /.contact-title -->
- <div class="contact-txt">
-   <p>
-    ご質問、ご意見、お問い合わせについては、下記のフォームからお願いします。<br>
-    また、土・日、祝日、休業期間等は、営業日での対応とさせていただきます。
-   </p>
- </div>
- <!-- /.contact-txt -->
-  
- <div class="form">
-    <div class="form-block">
-      <label class="form-title" for="company">企業または団体名</label>
-      <input id="company" placeholder="株式会社○○○○" type="text" name="company">
-    </div>
-    <div class="form-block">
-      <label class="form-title" for="name" >お名前<span>必須</span></label>
-      <input id="name"  type="text" name="name" placeholder="○○　○○" required="" >
-    </div>
-    <div class="form-block">
-      <label class="form-title" for="tel">お電話番号</label>
-      <input id="tel" class="font-en" placeholder="012-34-5678" type="text" name="tel">
-    </div>
-    <div class="form-block">
-      <label class="form-title" for="email">メールアドレス<span>必須</span></label>
-      <input id="mail" class="font-en" placeholder="aaaa@aaaa.co.jp" type="text" name="mail">
-    </div>
-    <div class="form-block">
-      <label class="form-title" for="contact">お問い合わせ内容<span>必須</span></label>
-      <textarea id="idea" placeholder="内容を詳細にご記入ください。" type="text" name="idea"></textarea>
-    </div>
-    <!-- /.form-block -->
-    <div class="submit-button">
-      <input  class="send-button" type="submit" value="送信する">
-     </div>
-     <!-- /.submit-button -->
- </div>
- <!-- /.form -->
-</section>
-</main>  
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="wrapper">
+        <div class="hero-content">
+          <h1 class="hero-title">お問い合わせ</h1>
+          <p class="hero-subtitle">製品のご購入から事業に関するご質問まで<br>お気軽にお問い合わせください</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Contact Section -->
+    <section class="quick-contact">
+      <div class="wrapper">
+        <h2 class="section-title">お急ぎの方はこちら</h2>
+        <div class="contact-methods">
+          <div class="contact-card phone-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-info">
+              <h3>お電話でのお問い合わせ</h3>
+              <p class="contact-number">090-2824-2111</p>
+              <p class="contact-hours">営業時間：06:00〜23:00（土日祝日も対応）</p>
+            </div>
+          </div>
+          
+          <div class="contact-card email-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <h3>メールでのお問い合わせ</h3>
+              <p class="contact-email">i.syoma.1008@gmail.com</p>
+              <p class="response-time">24時間以内にご返信いたします</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="wrapper">
+        <h2 class="section-title">お問い合わせフォーム</h2>
+        <div class="form-container">
+          <div class="form-intro">
+            <p>以下のフォームから詳細なお問い合わせが可能です。<br>お気軽にご相談ください。</p>
+          </div>
+          
+          <div class="google-form-link">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="form-button">
+              <i class="fas fa-external-link-alt"></i>
+              お問い合わせフォームを開く
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Info Section -->
+    <section class="business-info">
+      <div class="wrapper">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-content">
+              <h3>営業時間</h3>
+              <p>06:00〜23:00</p>
+              <p class="info-note">土日祝日も営業しております</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h3>所在地</h3>
+              <p>愛媛県今治市</p>
+              <p class="info-note">桜井海岸周辺エリア</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-reply"></i>
+            </div>
+            <div class="info-content">
+              <h3>回答時間</h3>
+              <p>24時間以内</p>
+              <p class="info-note">お急ぎの場合はお電話でご連絡ください</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="wrapper">
+        <h2 class="section-title">よくあるご質問</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>松葉製品の購入方法を教えてください</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>お電話またはお問い合わせフォームよりご連絡ください。製品の詳細説明から配送まで丁寧にサポートいたします。</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>松葉の回収エリアはどちらですか？</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>主に愛媛県今治市の桜井海岸周辺で松葉の回収を行っています。その他のエリアについてもお気軽にご相談ください。</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>事業提携や協業についてのご相談は可能ですか？</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>はい、承っております。環境保全に関する事業提携や協業についてもお気軽にご相談ください。</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>見積もりは無料ですか？</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>はい、お見積もりは無料で承っております。製品やサービスの詳細についてもお気軽にお問い合わせください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="wrapper">
+        <h2 class="section-title">アクセス</h2>
+        <div class="map-container">
+          <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <p>愛媛県今治市</p>
+            <p class="map-note">詳細な住所については、お問い合わせ時にお伝えいたします</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="social-section">
+      <div class="wrapper">
+        <h2 class="section-title">SNSでも情報発信中</h2>
+        <div class="social-links">
+          <a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" class="social-link instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61556591608342" class="social-link facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+          </a>
+        </div>
+        <p class="social-description">最新の活動状況や製品情報をSNSでも発信しています。ぜひフォローしてください！</p>
+      </div>
+    </section>
+
+    <!-- Support Resources Section -->
+    <section class="support-section">
+      <div class="wrapper">
+        <h2 class="section-title">サポート・関連情報</h2>
+        <div class="support-grid">
+          <div class="support-card">
+            <div class="support-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="support-content">
+              <h3>松葉について</h3>
+              <p>松葉の特性や環境への取り組みについて詳しくご紹介しています。</p>
+              <a href="matuba.html" class="support-link">詳細を見る</a>
+            </div>
+          </div>
+          
+          <div class="support-card">
+            <div class="support-icon">
+              <i class="fas fa-box"></i>
+            </div>
+            <div class="support-content">
+              <h3>製品紹介</h3>
+              <p>松葉を活用した製品ラインナップをご覧いただけます。</p>
+              <a href="product.html" class="support-link">製品を見る</a>
+            </div>
+          </div>
+          
+          <div class="support-card">
+            <div class="support-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="support-content">
+              <h3>会社概要</h3>
+              <p>株式会社マツノミライの企業情報や代表メッセージをご紹介しています。</p>
+              <a href="company.html" class="support-link">会社情報を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>  
 <footer id="footer">
-<div class="footer-list wrapper">
-  <div class="footer-flex">
-  <div>
-  <ul class="footer-navi">
-    <li><a href="matuba.html">松葉について</a></li>
-    <li><a href="company.html">会社概要</a></li>
-    <li><a href="product.html">製品紹介</a></li>
-    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
-  </ul>
-</div>
-<div>
-  <ul class="icon-navi">
-        <li><a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" ><img src="assets/images/footer_img/footer1.png" alt="instagram"></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61556591608342"><img src="assets/images/footer_img/footer2.png" alt="facebook"></a></li>
-  </ul>
-</div>
-</div>
-<p class="copyright font-en">&copy; 2024  Matunomirai Corp.</p>
-</div>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="footer-logo">マツノミライ</h3>
+        <p class="footer-description">松でミライを変える。<br>美しい桜井海岸を守る持続可能な取り組み。</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61556591608342" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="matuba.html">松葉について</a></li>
+            <li><a href="product.html">製品紹介</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>サポート</h4>
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
+            <li><a href="personal.html">プライバシーポリシー</a></li>
+            <li><a href="policy.html">サイトポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2024 Matunomirai Corp. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
+
+<script>
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(function(question) {
+    question.addEventListener('click', function() {
+      const faqItem = this.parentElement;
+      const answer = faqItem.querySelector('.faq-answer');
+      const icon = this.querySelector('i');
+      
+      // Toggle active state
+      faqItem.classList.toggle('active');
+      
+      // Toggle answer visibility
+      if (faqItem.classList.contains('active')) {
+        answer.style.display = 'block';
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        answer.style.display = 'none';
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
 

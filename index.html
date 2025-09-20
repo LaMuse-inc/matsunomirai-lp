@@ -10,14 +10,15 @@
   <meta property="og:title" content="トップ｜株式会社マツノミライ" />
   <meta property="og:description" content="集めた廃棄松葉を再利用し製品化する事業をおこなっております。" />
   <meta property="og:site_name" content="株式会社マツノミライ" />
-  <meta property="og:image" content="https://matunomirai.sakura.ne.jp/assets/images/header_img/logo2.png" />
-  <link rel="icon" href="assets/images/top_img/favicon.png">
+  <meta property="og:image" content="https://matunomirai.sakura.ne.jp/assets/images/header_img/logo_image.png" />
+  <link rel="icon" href="assets/images/header_img/logo_image.png">
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/css/6-1-8.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
 </head>
@@ -25,36 +26,49 @@
   <header id="header">
     <div class="header-inner">
       <div class="header-title">
-    <a href="index.html"><img src="assets/images/header_img/logo.png" alt="ロゴ"></a>
-     <h1>マツノミライ</h1>
+        <a href="index.html" class="header-logo-link">
+          <img src="assets/images/header_img/logo_image.png" alt="ロゴ">
+          <span class="company-name">マツノミライ</span>
+        </a>
       </div>
       <!-- /.header-title -->
-     <div class="header-site-menu">
-      <div id="nav-drawer">
-        <input id="nav-input" class="none" type="checkbox">
-        <label id="nav-open" for="nav-input"><span></span></label>
-        <label id="nav-close" class="none" for="nav-input"></label>
-    <nav id="nav-content" class="header__navigation">
-      <ul>
-        <li><a href="matuba.html">松葉について</a></li>
-        <li><a href="company.html">会社概要</a></li>
-        <li><a href="product.html">製品紹介</a></li>
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=pp_url" target="_blank">お問い合わせ</a></li>
-        <li class="menu-none">
-          <a class="nav-drawer__link-instagram" href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==">
-            <img src="assets/images/footer_img/footer1.png" alt="インスタグラム">
-          </a>
-        </li>
-        <li class="menu-none">
-          <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342"><img src="assets/images/footer_img/footer2.png" alt="フェイスブック">
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- /#nav-drawer -->
-  </div>
-   <!-- /.header-site-menu -->
+      <!-- Desktop Navigation -->
+      <nav class="header__navigation">
+        <ul>
+          <li><a href="matuba.html">松葉について</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="product.html">製品紹介</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=pp_url" target="_blank">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="header-site-menu">
+        <div id="nav-drawer">
+          <input id="nav-input" class="none" type="checkbox">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label id="nav-close" class="none" for="nav-input"></label>
+          <nav id="nav-content">
+            <ul>
+              <li><a href="matuba.html">松葉について</a></li>
+              <li><a href="company.html">会社概要</a></li>
+              <li><a href="product.html">製品紹介</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=pp_url" target="_blank">お問い合わせ</a></li>
+              <li class="menu-none">
+                <a class="nav-drawer__link-instagram" href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="menu-none">
+                <a class="nav-drawer__link-facebook" href="https://www.facebook.com/profile.php?id=61556591608342"><i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- /#nav-drawer -->
+      </div>
+      <!-- /.header-site-menu -->
   </div>
    <!-- /.header-inner -->
   </header>
@@ -76,7 +90,7 @@
       <div class="flex-c">
         <figure class="image-c delay-time04 fadeUp"><img src="assets/images/top_img/top3.jpg" alt="松葉集め"></figure>
         <h2 class="txt">
-          <span>現役高校生</span>による松葉再生 <br>
+          <span>現役大学生</span>による松葉再生 <br>
           プロジェクトが<br class="br-sp">動き出す。
         </h2>
       </div>
@@ -227,7 +241,7 @@
     <p class="about-p"> 同志と協力し、美しく可能性に溢れたミライを守る。</p>
     <div class="button fadein">
       <a href="company.html" class="button-link primary-button">
-        <span class="font-en">let’s see</span>
+        <span class="font-en">let's see</span>
       </a>
      </div> 
      <!-- /.button -->
@@ -236,13 +250,13 @@
     <div class="button-flex">
       <div class="left-button fadein">
         <a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" class="instagram-button">
-          <img src="assets/images/top_img/top14.png" alt="instagram-black">
+          <i class="fab fa-instagram"></i>
         </a>
        </div>
        <!-- /.left-button -->
        <div class="right-button fadein">
         <a href="https://www.facebook.com/profile.php?id=61556591608342" class="facebook-button">
-          <img src="assets/images/top_img/top15.png" alt="facebook-black">
+          <i class="fab fa-facebook-f"></i>
         </a>
        </div> 
        <!-- /.right-button -->
@@ -265,7 +279,7 @@
   </div>
 <div class="button fadein">
   <a href="product.html" class="button-link primary-button">
-    <span class="font-en">let’s see</span>
+    <span class="font-en">let's see</span>
   </a>
  </div> 
 </section>
@@ -283,7 +297,7 @@
   <!-- contact text -->
     <div class="contact-button">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank" class="button-link primary-button">
-        <span class="font-en">let’s see</span>
+        <span class="font-en">let's see</span>
       </a>
      </div> 
     </div>
@@ -291,27 +305,46 @@
 </section>
 </main>  
 <footer id="footer">
-<div class="footer-list wrapper">
-  <div class="footer-flex">
-  <div>
-  <ul class="footer-navi">
-    <li><a href="matuba.html">松葉について</a></li>
-    <li><a href="company.html">会社概要</a></li>
-    <li><a href="product.html">製品紹介</a></li>
-    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
-    <li><a href="personal.html">プライバシーポリシー</a></li>
-    <li><a href="policy.html">サイトポリシー</a></li>
-  </ul>
-</div>
-<div>
-  <ul class="icon-navi">
-    <li><a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" ><img src="assets/images/footer_img/footer1.png" alt="instagram"></a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61556591608342"><img src="assets/images/footer_img/footer2.png" alt="facebook"></a></li>
-  </ul>
-</div>
-</div>
-<p class="copyright font-en">&copy; 2024  Matunomirai Corp.</p>
-</div>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="footer-logo">マツノミライ</h3>
+        <p class="footer-description">松でミライを変える。<br>美しい桜井海岸を守る持続可能な取り組み。</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/matunomirai?igsh=MXF5a3YwYmRlcXJucQ==" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61556591608342" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="matuba.html">松葉について</a></li>
+            <li><a href="product.html">製品紹介</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>サポート</h4>
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
+            <li><a href="personal.html">プライバシーポリシー</a></li>
+            <li><a href="policy.html">サイトポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2024 Matunomirai Corp. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 
