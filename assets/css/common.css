@@ -28,7 +28,7 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 768px) {
   .header-inner {
     height: 70px;
     padding-left: 20px;
@@ -98,7 +98,7 @@ body {
 }
 
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 768px) {
   .header-logo-link img {
     width: 70px;
   }
@@ -365,6 +365,19 @@ body {
   box-shadow: 0 5px 15px rgba(13, 110, 255, 0.3);
 }
 
+/* Active state for current page */
+.header__navigation li a.active {
+  background: linear-gradient(135deg, #0D6EFF, #4A90E2);
+  color: white;
+  box-shadow: 0 3px 10px rgba(13, 110, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.header__navigation li a.active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* Special styling for contact button */
 .header__navigation li:last-child a {
   background: linear-gradient(135deg, #E3FB51, #B8E000);
@@ -386,8 +399,15 @@ body {
   display: none;
 }
 
+/* Hide mobile navigation on desktop */
+@media screen and (min-width: 769px) {
+  #nav-drawer {
+    display: none;
+  }
+}
+
 /* Mobile Responsive Design */
-@media screen and (max-width:1099px) {
+@media screen and (max-width: 768px) {
 
 /* Hide desktop navigation */
 .header__navigation {
@@ -533,6 +553,15 @@ body {
   box-shadow: 0 5px 15px rgba(13, 110, 255, 0.3);
 }
 
+/* Active state for mobile navigation */
+#nav-content ul li a.active {
+  background: linear-gradient(135deg, #0D6EFF, #4A90E2);
+  color: white;
+  border-color: #E3FB51;
+  transform: translateX(3px);
+  box-shadow: 0 3px 10px rgba(13, 110, 255, 0.4);
+}
+
 /* Animation for mobile menu items */
 @keyframes slideInLeft {
   to {
@@ -601,30 +630,13 @@ body {
 
 .primary-button {
   position: relative;
-}
-
-.primary-button::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #E3FB51;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.primary-button span {
-  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(227, 251, 81, 0.3);
 }
 
 .primary-button:hover {
-  color: #0D6EFF;
-}
-
-.primary-button:hover::before {
-  transform: translateX(0);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(227, 251, 81, 0.5);
 }
 
 

@@ -223,12 +223,12 @@ li {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(13, 110, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(227, 251, 81, 0.3);
 }
 
 .form-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(13, 110, 255, 0.4);
+  box-shadow: 0 8px 16px rgba(227, 251, 81, 0.5);
   color: white;
 }
 
