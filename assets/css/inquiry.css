@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* 問い合わせフォーム埋め込みページ */
+.form-embed-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.form-embed-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form-embed-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-embed {
+  width: 100%;
+  min-height: 1600px;
+  border: 0;
+  background: transparent;
+}
+
+.form-embed-fallback {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.form-embed-fallback a {
+  color: var(--blue-600);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .form-embed-section {
+    padding: 40px 0;
+  }
+  .form-embed {
+    min-height: 2000px;
+  }
+}
