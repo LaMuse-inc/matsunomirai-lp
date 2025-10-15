@@ -523,16 +523,15 @@
 /* Products CTA Section */
 .products-cta-section {
   padding: 0;
-  background: rgb(78, 178, 249);
+  background: #1E3A8A; /* dark blue */
   color: #FFFFFF;
   text-align: center;
   position: relative;
   margin-bottom: 0;
 }
 
-/* Tighten spacing below products CTA when adjacent to footer */
-.products-cta-section + #footer { margin-top: 0; }
-.products-cta-section + #footer .footer-container { padding-top: 0; }
+/* Remove top margin when footer directly follows main */
+main + #footer { margin-top: 0; }
 
 .products-cta-section::before {
   content: '';
@@ -567,12 +566,14 @@
   border: none;
   border-radius: 0;
   padding: 0;
+  min-height: clamp(320px, 50vh, 560px);
   box-shadow: none;
   display: grid;
   grid-template-columns: 1fr auto;
   column-gap: 20px;
-  row-gap: 8px;
+  row-gap: 12px;
   align-items: center;
+  align-content: center;
 }
 
 .products-cta-section .button-link {
@@ -801,7 +802,7 @@
 .impact-section { background: var(--surface); }
 .impact-item { background: var(--white); }
 .impact-icon { background: linear-gradient(135deg, var(--blue-600), var(--accent-yellow)); }
-.products-cta-section { background: rgb(78, 178, 249); }
+.products-cta-section { background: #1E3A8A; /* dark blue */ }
 .products-cta-section .button-link { background: var(--accent-yellow); color: #FFFFFF; }
 .products-cta-section .button-link:hover { background: var(--white); color: var(--text); }
 .cta-button .button-link { background: var(--blue-600); color: var(--white); }
@@ -917,6 +918,8 @@
   .contact-cta-section .cta-content {
     grid-template-columns: 1fr;
     padding: 24px 20px;
+    min-height: clamp(280px, 52vh, 480px);
+    align-content: center;
   }
   .products-cta-section .cta-button,
   .contact-cta-section .cta-button {
