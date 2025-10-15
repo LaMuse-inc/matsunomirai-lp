@@ -782,12 +782,12 @@ body {
   font-weight: 600;
   font-size: 1.125rem;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(227, 251, 81, 0.3);
 }
 
 .button-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(227, 251, 81, 0.3);
-  background: #d9f441;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(227, 251, 81, 0.5);
 }
 
 /* Mobile Responsiveness */

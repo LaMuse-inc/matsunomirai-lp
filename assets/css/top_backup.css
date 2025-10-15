@@ -700,53 +700,7 @@ box-shadow: 36px 20px #E3FB51 ;
   margin-top: 50px;
 }
 
-.instagram-button {
-  display: block;
-	text-align: center;
-	width: 130px;
-	margin: auto;
-	padding: 7PX 43PX;
-	border: 2px solid #000;
-	background: #FFF;
-	color: #000;
-	border-radius: 5px;
-	transition: 0.5s;
-	animation: move_a 2s infinite;
-}
 
-@keyframes move_a {
-  0% {transform: translate(0px, 4px);}
-  5% {transform: translate(0px, -4px);}
-  10% {transform: translate(0px, 4px);}
-  15% {transform: translate(0px, -4px);}
-  20% {transform: translate(0px, 4px);}
-  25% {transform: translate(0px, -4px);}
-  30% {transform: translate(0px, 0px);}
-}
-
-a.instagram-button:hover {
-color: #fff;
-background: #0D6EFF;
-}
-
-.facebook-button {
-  display: block;
-	text-align: center;
-	width: 130px;
-	margin: auto;
-	padding: 7PX 43PX;
-	border: 2px solid #000;
-	background: #FFF;
-	color: #000;
-	border-radius: 5px;
-	transition: 0.5s;
-	animation: move_a 2s infinite;
-}
-
-a.facebook-button:hover {
-color: #fff;
-background: #0D6EFF;
-}
 
 .sns-button img {
   width: 45px;

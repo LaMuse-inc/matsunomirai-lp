@@ -473,12 +473,12 @@
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(227, 251, 81, 0.3);
 }
 
 .cta-button .button-link:hover {
-  background: #E3FB51;
-  color: #333;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(227, 251, 81, 0.5);
 }
 
 /* Responsive Design */
