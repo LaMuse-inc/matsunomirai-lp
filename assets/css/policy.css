@@ -191,7 +191,7 @@ margin-top: 15px;
 
 
 .contact-title {
-  color: #E3FB51;
+  color: var(--green-500);
   text-align: center;
 }
 

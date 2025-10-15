@@ -44,16 +44,18 @@
 .hero-en {
   font-family: "Dela Gothic One", cursive;
   font-size: clamp(32px, 5vw, 64px);
-  color: #E3FB51;
+  color: var(--white);
   letter-spacing: 0.05em;
   line-height: 1.1;
 }
 
 .hero-ja {
-  font-size: clamp(20px, 3vw, 36px);
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  line-height: 1.3;
+  font-family: "Dela Gothic One", cursive;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
 .hero-description {
@@ -77,17 +79,33 @@
 .title-en {
   font-family: "Dela Gothic One", cursive;
   font-size: clamp(24px, 3.5vw, 36px);
-  color: #28a745;
+  color: var(--blue-600);
   letter-spacing: 0.05em;
   line-height: 1.25;
 }
 
 .title-ja {
-  font-size: clamp(18px, 2.5vw, 24px);
-  color: #333;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: clamp(36px, 5vw, 48px);
+  color: var(--blue-600);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  /* マーカー厚さ（文字太さと見た目が揃う目安）。必要に応じて微調整 */
+  --marker-thickness: 0.15em;
+}
+.section-title .title-ja {
+  display: inline;
+  padding: 0 4px;
+  /* 中央帯のマーカー：文字の太さと同じ厚さに可変 */
+  background-image: linear-gradient(
+    to bottom,
+    transparent calc(50% - (var(--marker-thickness) / 2)),
+    rgba(13, 110, 255, 0.22) 0,
+    rgba(13, 110, 255, 0.22) calc(100% + (var(--marker-thickness) / 2)),
+    transparent 0
+  );
+  box-decoration-break: clone;
 }
 
 /* Characteristics Section */
@@ -114,40 +132,29 @@
 }
 
 .characteristic-item {
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
-  border: 1px solid transparent;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   padding: var(--space-24);
   border-radius: 8px; /* 角張りデザイン */
   text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .characteristic-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
 }
 
 /* icons removed */
 .characteristic-icon { display: none; }
 
-/* Marker highlight for headings */
-.characteristic-item h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text);
-  display: inline;
-  padding: 0 2px;
-  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.22) 0);
-  box-decoration-break: clone;
-}
-
+/* Card heading simplified: remove inner marker, unify weight/color */
 .characteristic-item h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 15px;
-  color: #333;
+  margin-bottom: 12px;
+  color: var(--text);
 }
 
 .characteristic-item p {
@@ -204,7 +211,7 @@
   font-family: "Dela Gothic One", cursive;
   font-size: clamp(30px, 6.5vw, 52px);
   margin-bottom: 8px;
-  color: var(--accent-yellow);
+  color: var(--white);
   text-shadow: 0 1px 0 rgba(0,0,0,0.1);
 }
 
@@ -236,21 +243,20 @@
 }
 
 .problem-card {
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
-  border: 1px solid transparent;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   padding: var(--space-24);
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .problem-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .problem-icon {
@@ -273,15 +279,10 @@
 .problem-icon { display: none; }
 
 .problem-card h3 {
-  /* マーカー風の強調（特性カードと統一） */
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
-  display: inline;
-  padding: 0 2px;
-  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.22) 0);
-  box-decoration-break: clone;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .problem-card p {
@@ -323,13 +324,12 @@
 }
 
 .potential-item {
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
-  border: 1px solid transparent;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   padding: var(--space-24);
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -342,7 +342,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, var(--green-600), var(--green-500));
+  background: linear-gradient(135deg, var(--blue-600), var(--green-600));
 }
 
 .potential-item:hover {
@@ -374,8 +374,8 @@
 }
 
 .benefit-tag {
-  background: linear-gradient(135deg, #28a745, #20c997);
-  color: white;
+  background: var(--green-500);
+  color: #fff;
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -438,7 +438,7 @@
 .step-number {
   font-family: "Dela Gothic One", cursive;
   font-size: 36px;
-  color: #28a745;
+  color: var(--green-600);
   min-width: 60px;
   text-align: center;
   line-height: 1;
@@ -490,13 +490,12 @@
 }
 
 .impact-item {
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
-  border: 1px solid transparent;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   padding: var(--space-24);
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
 }
 
@@ -549,6 +548,10 @@ main + #footer { margin-top: 0; }
   margin-bottom: 16px;
   display: block;
   padding: 0;
+  /* CTAタイトルだけマーカー幅を短くする */
+  background-repeat: no-repeat;
+  background-size: 75% 100%;
+  background-position: center center;
 }
 
 .products-cta-section .cta-description {
@@ -560,7 +563,7 @@ main + #footer { margin-top: 0; }
 
 /* CTA content card for hierarchy */
 .products-cta-section .cta-content {
-  max-width: clamp(520px, 76vw, 680px);
+  max-width: clamp(300px, 76vw, 400px);
   margin: 0 auto;
   background: transparent;
   border: none;
@@ -569,7 +572,7 @@ main + #footer { margin-top: 0; }
   min-height: clamp(320px, 50vh, 560px);
   box-shadow: none;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   column-gap: 20px;
   row-gap: 12px;
   align-items: center;
@@ -580,7 +583,7 @@ main + #footer { margin-top: 0; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--accent-yellow);
+  background: var(--green-600);
   color: #FFFFFF;
   padding: 12px 22px;
   border-radius: 10px;
@@ -619,8 +622,16 @@ main + #footer { margin-top: 0; }
   font-weight: 700;
   margin-bottom: 16px;
   display: inline;
-  padding: 0 2px;
-  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.18) 0);
+  /* 他のマーカー（title-ja）と同じ厚みに統一 */
+  --marker-thickness: 0.15em;
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom,
+    transparent calc(50% - (var(--marker-thickness) / 2)),
+    rgba(13, 110, 255, 0.22) 0,
+    rgba(13, 110, 255, 0.22) calc(100% + (var(--marker-thickness) / 2)),
+    transparent 0
+  );
   box-decoration-break: clone;
 }
 
@@ -638,8 +649,9 @@ main + #footer { margin-top: 0; }
 }
 
 .cta-button .button-link {
-  display: inline-flex;
-  align-items: center;
+  display: block;
+  width: 100%;
+  text-align: center;
   gap: 10px;
   background: var(--blue-600);
   color: var(--white);
@@ -653,8 +665,8 @@ main + #footer { margin-top: 0; }
 .cta-button { margin-top: 16px; }
 
 .cta-button .button-link:hover {
-  background: #E3FB51;
-  color: #333;
+  background: var(--green-500);
+  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -742,9 +754,9 @@ main + #footer { margin-top: 0; }
   }
   .title-ja {
     font-size: clamp(18px, 2.5vw, 24px);
-    color: #333;
-    font-weight: 300;
-    letter-spacing: 0.1em;
+    color: var(--blue-600);
+    font-weight: 600;
+    letter-spacing: 0.05em;
     line-height: 1.4;
   }
   .characteristic-item,
@@ -777,57 +789,37 @@ main + #footer { margin-top: 0; }
 .cta-blue { background: var(--blue-600); color: #fff; }
 
 /* Matsuba design overrides (token-based) */
-.hero-en { color: var(--accent-yellow); }
-.title-en { color: var(--green-600); }
-.title-ja { color: var(--text); }
+.hero-ja { color: var(--white); }
+.title-en { color: var(--blue-600); }
+.title-ja { color: var(--blue-600); }
 .characteristics-section { background: var(--surface); }
 .characteristic-item { background: var(--white); }
-.characteristic-icon { background: linear-gradient(135deg, var(--green-600), var(--accent-yellow)); }
+.characteristic-icon { background: linear-gradient(135deg, var(--blue-600), var(--green-600)); }
 .characteristic-item h3 { color: var(--text); }
 .problem-section { background: var(--white); }
 .problem-card {
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
-  border: 1px solid transparent;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .problem-card h3 { color: var(--text); }
 .potential-section { background: var(--surface); }
 .potential-item { background: var(--white); }
-.potential-item::before { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
-.potential-icon { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.potential-item::before { background: linear-gradient(135deg, var(--blue-600), var(--green-600)); }
+.potential-icon { background: linear-gradient(135deg, var(--blue-600), var(--green-600)); }
 .potential-item h3 { color: var(--text); }
-.benefit-tag { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.benefit-tag { background: var(--green-500); color: #fff; }
 .approach-section { background: var(--white); }
 .step-number { color: var(--green-600); }
 .impact-section { background: var(--surface); }
 .impact-item { background: var(--white); }
-.impact-icon { background: linear-gradient(135deg, var(--blue-600), var(--accent-yellow)); }
+.impact-icon { background: linear-gradient(135deg, var(--blue-600), var(--green-600)); }
 .products-cta-section { background: #1E3A8A; /* dark blue */ }
-.products-cta-section .button-link { background: var(--accent-yellow); color: #FFFFFF; }
+.products-cta-section .button-link { background: var(--green-600); color: #FFFFFF; }
 .products-cta-section .button-link:hover { background: var(--white); color: var(--text); }
 .cta-button .button-link { background: var(--blue-600); color: var(--white); }
-.cta-button .button-link:hover { background: var(--accent-yellow); color: var(--text); }
-/* Prevent overlap in h2 section titles with span children */
-.section-title .title-en,
-.section-title .title-ja {
-  display: block;
-  max-width: 100%;
-  overflow-wrap: anywhere;
-}
-.title-en {
-  font-family: "Dela Gothic One", cursive;
-  font-size: clamp(24px, 3.5vw, 36px);
-  color: #28a745;
-  letter-spacing: 0.05em;
-  line-height: 1.25;
-}
-.title-ja {
-  font-size: clamp(18px, 2.5vw, 24px);
-  color: #333;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-}
+.cta-button .button-link:hover { background: var(--green-500); color: #FFFFFF; }
+/* Section title spans allow wrapping without display override. */
+/* Intentionally removing duplicate title-en/title-ja overrides to prevent conflicts. */
 .characteristic-item,
 .potential-item,
 .impact-item,

@@ -23,7 +23,7 @@ body {
   --text-strong: #2c3e50;
   --text: #333;
   --white: #fff;
-  --accent-yellow: #E3FB51; /* existing accent kept for subtle shadows */
+  --accent-yellow: var(--green-500); /* switched to green for consistent branding */
 }
 
 .font-en {
@@ -644,7 +644,7 @@ box-shadow: 36px 20px var(--accent-yellow);
 }
 
 .contact-title {
-  color: #E3FB51;
+  color: var(--green-500);
   text-align: center;
 }
 
