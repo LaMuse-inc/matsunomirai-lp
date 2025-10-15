@@ -1,15 +1,15 @@
 /* Company Page Styles */
 
-/* Container */
+/* Container (align with matuba.css) */
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 24px;
 }
 
-/* Hero Section */
+/* Hero Section (match matuba style) */
 .hero-section {
-  background: linear-gradient(135deg, #0D6EFF 0%, #34495e 100%);
+  background: linear-gradient(135deg, var(--blue-600) 0%, #0A2A5E 100%);
   color: white;
   padding: 120px 0 80px;
   text-align: center;
@@ -20,12 +20,11 @@
 .hero-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-  opacity: 0.3;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(13, 110, 255, 0.58), rgba(10, 42, 94, 0.62)), url('../images/IMG_9139.JPG');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.85) brightness(0.85);
 }
 
 .hero-content {
@@ -44,15 +43,17 @@
 
 .hero-en {
   font-family: "Dela Gothic One", cursive;
-  font-size: 64px;
-  color: #E3FB51;
+  font-size: clamp(32px, 5vw, 64px);
+  color: var(--white);
   letter-spacing: 0.05em;
+  line-height: 1.1;
 }
 
 .hero-ja {
-  font-size: 36px;
+  font-size: clamp(20px, 3vw, 36px);
   font-weight: 300;
   letter-spacing: 0.1em;
+  line-height: 1.3;
 }
 
 .hero-description {
@@ -63,28 +64,30 @@
   margin: 0 auto;
 }
 
-/* Section Title */
+/* Section Title (match matuba spacing) */
 .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: var(--space-24);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-8);
 }
 
 .title-en {
   font-family: "Dela Gothic One", cursive;
-  font-size: 36px;
-  color: #0D6EFF;
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #28a745;
   letter-spacing: 0.05em;
+  line-height: 1.25;
 }
 
 .title-ja {
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   color: #333;
   font-weight: 300;
   letter-spacing: 0.1em;
+  line-height: 1.4;
 }
 
 /* Mission Section */
@@ -103,34 +106,29 @@
 
 .mission-values {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
   margin-top: 60px;
 }
 
 .value-item {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
+  border: 1px solid transparent;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .value-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #0D6EFF, #E3FB51);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
+  display: none;
 }
 
 .value-icon i {
@@ -140,9 +138,13 @@
 
 .value-item h3 {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--text);
+  display: inline;
+  padding: 0 2px;
+  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.22) 0);
+  box-decoration-break: clone;
   margin-bottom: 15px;
-  color: #333;
 }
 
 .value-item p {
@@ -163,10 +165,13 @@
 }
 
 .info-card {
-  background: #f8f9fa;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: left;
 }
 
 .info-table {
@@ -220,7 +225,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(to bottom, #0D6EFF, #E3FB51);
+  background: linear-gradient(to bottom, var(--blue-600), var(--green-600));
 }
 
 .timeline-item {
@@ -253,16 +258,22 @@
 
 .timeline-content {
   flex: 1;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
+  border: 1px solid transparent;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .timeline-content h3 {
   font-size: 20px;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: var(--text);
+  display: inline;
+  padding: 0 2px;
+  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.22) 0);
+  box-decoration-break: clone;
   margin-bottom: 15px;
 }
 
@@ -286,11 +297,13 @@
 }
 
 .ceo-profile {
-  background: #f8f9fa;
-  border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .ceo-image {
@@ -302,7 +315,7 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #E3FB51;
+  border: 4px solid var(--green-500);
 }
 
 .ceo-title {
@@ -354,7 +367,7 @@
 
 .vision-sub {
   font-size: 18px;
-  color: #E3FB51;
+  color: var(--green-500);
   font-weight: 600;
   margin-bottom: 30px;
 }
@@ -379,106 +392,88 @@
   color: #555;
 }
 
-/* Team Section */
-.team-section {
-  padding: 100px 0;
-  background: #f8f9fa;
-}
+/* Team Section removed */
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-}
-
-.team-member {
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-  transform: translateY(-5px);
-}
-
-.member-image {
-  margin-bottom: 20px;
-}
-
-.member-image img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #E3FB51;
-}
-
-.member-name {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.member-en {
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 10px;
-}
-
-.member-role {
-  font-size: 14px;
-  color: #0D6EFF;
-  font-weight: 600;
-}
-
-/* Contact CTA Section */
+/* Contact CTA Section (match matuba style) */
 .contact-cta-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: white;
+  background: var(--white);
+  color: var(--text);
   text-align: center;
+  position: relative;
+}
+
+.contact-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary-90);
 }
 
 .cta-title {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: inline;
+  padding: 0 2px;
+  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.18) 0);
+  box-decoration-break: clone;
+}
+
+/* CONTACT見出しはロゴフォントの太字・マーカーなし */
+.contact-cta-section .cta-title {
+  font-family: "Dela Gothic One", cursive;
+  font-weight: 700;
+  background-image: none;
+  box-decoration-break: initial;
 }
 
 .cta-description {
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   opacity: 0.9;
 }
 
 .cta-hours {
   font-size: 16px;
   opacity: 0.8;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .cta-button .button-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #0D6EFF;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 50px;
+  background: var(--blue-600);
+  color: var(--white);
+  padding: 14px 26px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(227, 251, 81, 0.3);
 }
 
+/* Ensure space between button and preceding text */
+.cta-button { margin-top: 16px; }
+
 .cta-button .button-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(227, 251, 81, 0.5);
+  background: var(--green-500);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Contact CTA content layout */
+.contact-cta-section .cta-content {
+  max-width: clamp(520px, 76vw, 680px);
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
 }
 
 /* Responsive Design */
@@ -490,14 +485,8 @@
   .hero-section {
     padding: 80px 0 60px;
   }
-  
-  .hero-en {
-    font-size: 40px;
-  }
-  
-  .hero-ja {
-    font-size: 24px;
-  }
+  /* ヒーロー見出しのモバイル上書きを撤廃し、基準のclampに委譲 */
+  /* .hero-en / .hero-ja はベース定義のclampを利用 */
   
   .title-en {
     font-size: 28px;
@@ -540,12 +529,51 @@
     gap: 40px;
   }
   
-  .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-  }
-  
   .cta-title {
     font-size: 28px;
   }
 }
+
+/* Mobile compaction for Contact CTA */
+@media screen and (max-width: 640px) {
+  .contact-cta-section .cta-content {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    min-height: clamp(280px, 52vh, 480px);
+    align-content: center;
+    row-gap: 8px;
+    align-items: center;
+  }
+  .contact-cta-section .cta-title {
+    font-size: clamp(24px, 3.2vw, 30px);
+    margin-bottom: 8px;
+    grid-column: 1 / -1;
+  }
+  .contact-cta-section .cta-description {
+    font-size: clamp(16px, 2.2vw, 17px);
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .contact-cta-section .cta-hours { margin-bottom: 0; }
+  .contact-cta-section .cta-button { margin-top: 12px; justify-self: start; }
+  .contact-cta-section .button-link { padding: 12px 22px; border-radius: 10px; }
+}
+
+/* Ultra-small screens container padding */
+@media screen and (max-width: 360px) {
+  .container { padding: 0 12px; }
+}
+
+:root {
+  --blue-600: #0D6EFF;
+  --blue-500: #4A90E2;
+  --green-600: #11BD56;
+  --green-500: #20C997;
+  --gradient-primary: linear-gradient(135deg, var(--blue-600), var(--green-600));
+}
+.hero { background: var(--gradient-primary); }
+.accent { color: var(--green-500); }
+.section-header { color: var(--blue-600); }
+.banner { background: var(--gradient-primary); }
+.badge { border: 4px solid var(--green-500); }
+.btn-primary { background: var(--blue-600); color: #fff; }

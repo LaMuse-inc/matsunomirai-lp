@@ -380,3 +380,19 @@
   outline: 2px solid #0D6EFF;
   outline-offset: 2px;
 }
+
+:root {
+  --blue-600: #0D6EFF;
+  --blue-500: #4A90E2;
+  --green-600: #11BD56;
+  --green-500: #20C997;
+}
+.color-primary,
+.section-title,
+.link-blue {
+  color: var(--blue-600);
+}
+.some-class { background: var(--blue-600); }
+.outline-primary { outline: 2px solid var(--blue-600); }
+.button-primary { background: var(--blue-600); }
+.alt-blue { background: var(--blue-500); }
