@@ -956,3 +956,14 @@ body {
     transform: translateY(0);
   }
 }
+
+:root {
+  --blue-600: #0D6EFF;
+  --blue-500: #4A90E2;
+  --green-600: #11BD56;
+  --green-500: #20C997;
+}
+.title-blue { color: var(--blue-600); }
+.gradient-primary { background: linear-gradient(135deg, var(--blue-600), var(--green-600)); }
+.border-blue { border-color: var(--blue-600); }
+.button-primary { background: var(--blue-600); color: #fff; }

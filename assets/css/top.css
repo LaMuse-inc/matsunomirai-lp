@@ -14,6 +14,18 @@ body {
   line-height: 1.7;
 }
 
+/* Theme Color Tokens (local fallback if common.css not loaded first) */
+:root {
+  --blue-600: #0D6EFF;
+  --blue-500: #4A90E2;
+  --green-600: #11BD56;
+  --green-500: #20C997;
+  --text-strong: #2c3e50;
+  --text: #333;
+  --white: #fff;
+  --accent-yellow: #E3FB51; /* existing accent kept for subtle shadows */
+}
+
 .font-en {
   font-family: "Inter", sans-serif; 
 }
@@ -30,7 +42,7 @@ body {
 }
 
 a {
-  color: #333;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -149,13 +161,13 @@ list-style: none;
 
 .image-a-image01 {
 width: 416px;
-box-shadow: 36px 20px #E3FB51 ;
+box-shadow: 36px 20px var(--accent-yellow);
 }
 
 .image-a-image02 {
   width: 528px;
   margin-top: 188px;
-  box-shadow: 36px 20px #E3FB51 ;
+  box-shadow: 36px 20px var(--accent-yellow);
 }
 
 .flex-b {
@@ -170,7 +182,7 @@ box-shadow: 36px 20px #E3FB51 ;
   width: 520px;
   height: 420px;
   margin: 0 0 100px 860px;
-  box-shadow: -36px  20px #E3FB51;
+  box-shadow: -36px  20px var(--accent-yellow);
 }
 
 .flex-b .top-title {
@@ -194,7 +206,7 @@ box-shadow: 36px 20px #E3FB51 ;
 
 .flex-c .image-c {
   width: 528px;
-  box-shadow: 36px  20px #E3FB51 ;
+  box-shadow: 36px  20px var(--accent-yellow);
 }
 
 .flex-c .txt {
@@ -208,7 +220,7 @@ box-shadow: 36px 20px #E3FB51 ;
 }
 
 .flex-c .txt span {
-  color: #11BD56;
+  color: var(--green-600);
 }
 
 @media screen and (max-width:900px) {
@@ -235,195 +247,51 @@ box-shadow: 36px 20px #E3FB51 ;
   /* 上から一、二番目の画像 */
   .image-a-image01 {
   width: 156px;
-  box-shadow: 15px 10px #E3FB51 ;
+  box-shadow: 15px 10px var(--accent-yellow);
   }
   
   .image-a-image02 {
     width: 145px;
     margin-top: 186px;
-    box-shadow: 15px 10px #E3FB51 ;
+    box-shadow: 15px 10px var(--accent-yellow);
   }
 
   /* マツノミライ文字・メッセージ */
   
 .flex-b {
   position: absolute;
-  width: 100%;
-  height: 480px;
-  top: 197px;
-  left: 0;
+}
 }
 
-.flex-b .image-b {
-  width: 520px;
-  height: 420px;
-  margin: 0 0 100px 860px;
-  box-shadow: 15px 10px #E3FB51 ;
+/* 以降、見出しやボタンなどの色の統一 */
+
+/* 強調テキストの青系 */
+.txt-blue,
+#assignment .subheading .font-en,
+#againstthem .subheading .font-en,
+#support .font-en,
+#about .font-en,
+#produce .font-en {
+  color: var(--blue-600);
 }
 
-.flex-b .top-title {
-  width: 240px;
-  margin-left: 20px;
+/* セクション内のリンクやボタン */
+.button-link {
+  background-color: var(--blue-600);
+  color: var(--white);
 }
 
-.flex-b .txt {
-  font-size: 1.25rem;
-  margin-left: 20px;
+.primary-button {
+  box-shadow: 0 4px 8px rgba(17, 189, 86, 0.3);
 }
 
-  /* 上から三番目の画像・メッセージ */
-  .flex-c {
-    padding-top: 73px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .flex-c .image-c {
-    width: 178px;
-    box-shadow: 15px 10px #E3FB51 ;
-  }
-  
-  .flex-c .txt {
-    font-size: 1.25rem;
-    padding-left: 30px;
-    text-align: left;
-    display: block;
-  }
-
-  .flex-c .txt .br-sp {
-    display: block;
-  }
-
+.primary-button:hover {
+  box-shadow: 0 8px 16px rgba(17, 189, 86, 0.5);
 }
 
- /* 画像スライド  */
- .slide {
-  margin: 0 auto;
-  margin-bottom: 100px;
-  max-width: 100%;
-  width: 1440px;
- }
-
- .slide .slick-slide {
-  margin: 0 30px;
- }
-
- @media screen and (max-width:900px) {
-  .slide {
-    margin: 0 auto;
-    margin-bottom: 80px;
-    max-width: 100%;
-    width: 375px;
-   }
-
-   .slide .slick-slide {
-    margin: 0 20px;
-   }
- }
-
-/* 動機 */
-#motive  {
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-/* 画像の右にテキスト */
-.motives {
-  display: flex;
-  max-width: 100%;
-}
-
-/* 動機画像 */
-.motives img {
-  width: 520px;
-  height: 560px;
-}
-.contents {
-  padding-left: 30px;
-}
-
-/* 動機text */
-.contents p {
-  padding: 0;
-  text-align: left;
-  margin-bottom: 80px;
-}
-
-.contents p:last-child {
-  margin-bottom: 0;
-}
-
-@media screen and (max-width:1099px) {
-
-  .motives {
-    flex-wrap: wrap;
-    display: flex;
-    max-width: 100%;
-  }
-
-  .motives img {
-    width: 160px;
-    height: 175px;
-  }
-
-  .contents {
-    padding-left: 20px;
-  }
-
-  .contents .title:first-child {
-    margin-top: 50px;
-  }
-}
-
-/* 課題 */
-#assignment {
-  background-image: url(../images/top_img/top11.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 900px;
-  margin: 0 auto;
-}
-
-#assignment .shadow {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
-}
-
-#assignment .container {
-  color: #fff;
-  text-shadow: -1px -2px 3px #333;
-}
-
-#assignment .subheading {
-  padding: 100px 0 30px;
-  text-shadow: -1px -2px 3px #333;
-}
-
-.subheading p {
-  padding: 0;
-  text-align: left;
-}
-
-.assignment-p {
-  padding: 0;
-  text-align: left;
-}
-
-.againstthem-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 220px;
-} 
-.button {
-  margin: 60px 0 80px;
-}
-
-#assignment .title span {
-  font-size: 5rem;
-}
-
-#assignment .title .br-sp {
-  display: none;
+/* テキストシャドウの色味を控えめに */
+.shadow-text {
+  text-shadow: -1px -2px 3px rgba(51, 51, 51, 0.5);
 }
 
 @media screen and (max-width:1099px)  {

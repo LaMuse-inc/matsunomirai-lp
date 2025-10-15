@@ -1,15 +1,15 @@
 /* Matuba (Pine Needles) Page Styles */
 
-/* Container */
+/* Container (aligned with common.css) */
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 24px;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  background: linear-gradient(135deg, var(--blue-600) 0%, #0A2A5E 100%);
   color: white;
   padding: 120px 0 80px;
   text-align: center;
@@ -20,12 +20,11 @@
 .hero-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 L25,10 L30,20 L35,15 L40,25 M60,30 L65,20 L70,30 L75,25 L80,35" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none"/></svg>');
-  opacity: 0.3;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(13, 110, 255, 0.58), rgba(10, 42, 94, 0.62)), url('../images/IMG_9139.JPG');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.85) brightness(0.85);
 }
 
 .hero-content {
@@ -44,15 +43,17 @@
 
 .hero-en {
   font-family: "Dela Gothic One", cursive;
-  font-size: 64px;
+  font-size: clamp(32px, 5vw, 64px);
   color: #E3FB51;
   letter-spacing: 0.05em;
+  line-height: 1.1;
 }
 
 .hero-ja {
-  font-size: 36px;
+  font-size: clamp(20px, 3vw, 36px);
   font-weight: 300;
   letter-spacing: 0.1em;
+  line-height: 1.3;
 }
 
 .hero-description {
@@ -63,78 +64,83 @@
   margin: 0 auto;
 }
 
-/* Section Title */
+/* Section Title (spacing unified) */
 .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: var(--space-24);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-8);
 }
 
 .title-en {
   font-family: "Dela Gothic One", cursive;
-  font-size: 36px;
+  font-size: clamp(24px, 3.5vw, 36px);
   color: #28a745;
   letter-spacing: 0.05em;
+  line-height: 1.25;
 }
 
 .title-ja {
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   color: #333;
   font-weight: 300;
   letter-spacing: 0.1em;
+  line-height: 1.4;
 }
 
 /* Characteristics Section */
 .characteristics-section {
-  padding: 100px 0;
+  padding: var(--space-32) 0;
   background: #f8f9fa;
 }
+
+/* Photo overlay is applied only to hero-section; other sections use flat backgrounds */
 
 .intro-text {
   font-size: 18px;
   line-height: 1.8;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: var(--space-24);
   color: #555;
 }
 
 .characteristics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+  align-items: stretch;
 }
 
 .characteristic-item {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
+  border: 1px solid transparent;
+  padding: var(--space-24);
+  border-radius: 8px; /* 角張りデザイン */
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .characteristic-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.characteristic-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #28a745, #E3FB51);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
+/* icons removed */
+.characteristic-icon { display: none; }
 
-.characteristic-icon i {
-  font-size: 36px;
-  color: white;
+/* Marker highlight for headings */
+.characteristic-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  display: inline;
+  padding: 0 2px;
+  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.22) 0);
+  box-decoration-break: clone;
 }
 
 .characteristic-item h3 {
@@ -152,62 +158,99 @@
 
 /* Problem Section */
 .problem-section {
-  padding: 100px 0;
+  padding: 120px 0;
   background: white;
 }
 
 .problem-content {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 72px;
 }
 
 .problem-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
 }
 
 .stat-item {
   text-align: center;
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #dc3545, #fd7e14);
-  color: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+  padding: 30px 24px;
+  background: linear-gradient(135deg, var(--danger-600), var(--warning-500));
+  color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(220, 53, 69, 0.35);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(220, 53, 69, 0.45);
 }
 
 .stat-number {
   font-family: "Dela Gothic One", cursive;
-  font-size: 48px;
-  margin-bottom: 10px;
-  color: #E3FB51;
+  font-size: clamp(30px, 6.5vw, 52px);
+  margin-bottom: 8px;
+  color: var(--accent-yellow);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.1);
 }
 
 .stat-label {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  font-size: clamp(16px, 3.5vw, 20px);
+  font-weight: 900;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
 }
 
 .stat-item p {
   font-size: 14px;
-  opacity: 0.9;
-  line-height: 1.5;
+  font-weight: 500;
+  opacity: 1;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .problem-details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: stretch;
 }
 
 .problem-card {
-  background: #f8f9fa;
-  padding: 40px 30px;
-  border-radius: 15px;
-  border-left: 5px solid #dc3545;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
+  border: 1px solid transparent;
+  padding: var(--space-24);
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .problem-icon {
@@ -226,10 +269,18 @@
   color: white;
 }
 
+/* 統一感のためにアイコンは非表示に（角張りカードに集中） */
+.problem-icon { display: none; }
+
 .problem-card h3 {
+  /* マーカー風の強調（特性カードと統一） */
   font-size: 22px;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: var(--text);
+  display: inline;
+  padding: 0 2px;
+  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.22) 0);
+  box-decoration-break: clone;
   margin-bottom: 15px;
 }
 
@@ -267,16 +318,18 @@
 
 .potential-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
 .potential-item {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
+  border: 1px solid transparent;
+  padding: var(--space-24);
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -289,28 +342,15 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #28a745, #20c997);
+  background: linear-gradient(135deg, var(--green-600), var(--green-500));
 }
 
 .potential-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
-.potential-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #28a745, #20c997);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.potential-icon i {
-  font-size: 36px;
-  color: white;
-}
+/* icons removed */
+.potential-icon { display: none; }
 
 .potential-item h3 {
   font-size: 22px;
@@ -328,8 +368,8 @@
 
 .potential-benefits {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: var(--space-8);
   flex-wrap: wrap;
 }
 
@@ -375,7 +415,7 @@
 
 .approach-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
@@ -383,8 +423,10 @@
   display: flex;
   gap: 20px;
   padding: 30px;
-  background: #f8f9fa;
-  border-radius: 15px;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              var(--gradient-primary) border-box;
+  border: 1px solid transparent;
+  border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
@@ -443,38 +485,27 @@
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
 }
 
 .impact-item {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--green-600), var(--green-500)) border-box;
+  border: 1px solid transparent;
+  padding: var(--space-24);
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
 .impact-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
-.impact-icon {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #0D6EFF, #E3FB51);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.impact-icon i {
-  font-size: 28px;
-  color: white;
-}
+/* icons removed */
+.impact-icon { display: none; }
 
 .impact-item h3 {
   font-size: 20px;
@@ -491,83 +522,134 @@
 
 /* Products CTA Section */
 .products-cta-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  color: white;
+  padding: 0;
+  background: rgb(78, 178, 249);
+  color: #FFFFFF;
   text-align: center;
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* Tighten spacing below products CTA when adjacent to footer */
+.products-cta-section + #footer { margin-top: 0; }
+.products-cta-section + #footer .footer-container { padding-top: 0; }
+
+.products-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary-90);
 }
 
 .products-cta-section .cta-title {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: block;
+  padding: 0;
 }
 
 .products-cta-section .cta-description {
   font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  line-height: 1.7;
+  margin-bottom: 32px;
   opacity: 0.9;
+}
+
+/* CTA content card for hierarchy */
+.products-cta-section .cta-content {
+  max-width: clamp(520px, 76vw, 680px);
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+  row-gap: 8px;
+  align-items: center;
 }
 
 .products-cta-section .button-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #E3FB51;
-  color: #333;
-  padding: 15px 30px;
-  border-radius: 50px;
+  background: var(--accent-yellow);
+  color: #FFFFFF;
+  padding: 12px 22px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .products-cta-section .button-link:hover {
-  background: white;
-  color: #333;
+  background: var(--white);
+  color: var(--text);
   transform: translateY(-2px);
 }
 
 /* Contact CTA Section */
 .contact-cta-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: white;
+  background: var(--white);
+  color: var(--text);
   text-align: center;
+  position: relative;
+}
+
+.contact-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary-90);
 }
 
 .cta-title {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: inline;
+  padding: 0 2px;
+  background-image: linear-gradient(transparent 60%, rgba(13,110,255,0.18) 0);
+  box-decoration-break: clone;
 }
 
 .cta-description {
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   opacity: 0.9;
 }
 
 .cta-hours {
   font-size: 16px;
   opacity: 0.8;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .cta-button .button-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #0D6EFF;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 50px;
+  background: var(--blue-600);
+  color: var(--white);
+  padding: 14px 26px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
+/* Ensure space between button and preceding text */
+.cta-button { margin-top: 16px; }
 
 .cta-button .button-link:hover {
   background: #E3FB51;
@@ -578,7 +660,7 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
   
   .hero-section {
@@ -649,37 +731,196 @@
 }
 
 @media screen and (max-width: 480px) {
-  .hero-en {
-    font-size: 32px;
-  }
-  
-  .hero-ja {
-    font-size: 20px;
-  }
-  
+  .section-title { gap: 12px; }
   .title-en {
-    font-size: 24px;
+    font-family: "Dela Gothic One", cursive;
+    font-size: clamp(24px, 3.5vw, 36px);
+    color: #28a745;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
   }
-  
   .title-ja {
-    font-size: 18px;
+    font-size: clamp(18px, 2.5vw, 24px);
+    color: #333;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
   }
-  
   .characteristic-item,
   .potential-item,
   .impact-item,
   .problem-card {
     padding: 25px 20px;
   }
-  
   .characteristic-icon,
   .potential-icon {
     width: 60px;
     height: 60px;
   }
-  
   .characteristic-icon i,
   .potential-icon i {
     font-size: 28px;
+  }
+}
+
+:root {
+  --blue-600: #0D6EFF;
+  --green-600: #11BD56;
+  --green-500: #20C997;
+  --danger-600: #DC3545;
+  --warning-500: #FD7E14;
+}
+.ribbon { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.ribbon-blue-green { background: linear-gradient(135deg, var(--blue-600), var(--green-600)); }
+.badge-green { background: var(--green-500); }
+.cta-blue { background: var(--blue-600); color: #fff; }
+
+/* Matsuba design overrides (token-based) */
+.hero-en { color: var(--accent-yellow); }
+.title-en { color: var(--green-600); }
+.title-ja { color: var(--text); }
+.characteristics-section { background: var(--surface); }
+.characteristic-item { background: var(--white); }
+.characteristic-icon { background: linear-gradient(135deg, var(--green-600), var(--accent-yellow)); }
+.characteristic-item h3 { color: var(--text); }
+.problem-section { background: var(--white); }
+.problem-card {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--blue-600), var(--green-600)) border-box;
+  border: 1px solid transparent;
+}
+.problem-card h3 { color: var(--text); }
+.potential-section { background: var(--surface); }
+.potential-item { background: var(--white); }
+.potential-item::before { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.potential-icon { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.potential-item h3 { color: var(--text); }
+.benefit-tag { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.approach-section { background: var(--white); }
+.step-number { color: var(--green-600); }
+.impact-section { background: var(--surface); }
+.impact-item { background: var(--white); }
+.impact-icon { background: linear-gradient(135deg, var(--blue-600), var(--accent-yellow)); }
+.products-cta-section { background: rgb(78, 178, 249); }
+.products-cta-section .button-link { background: var(--accent-yellow); color: #FFFFFF; }
+.products-cta-section .button-link:hover { background: var(--white); color: var(--text); }
+.cta-button .button-link { background: var(--blue-600); color: var(--white); }
+.cta-button .button-link:hover { background: var(--accent-yellow); color: var(--text); }
+/* Prevent overlap in h2 section titles with span children */
+.section-title .title-en,
+.section-title .title-ja {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.title-en {
+  font-family: "Dela Gothic One", cursive;
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #28a745;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+}
+.title-ja {
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: #333;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+}
+.characteristic-item,
+.potential-item,
+.impact-item,
+.problem-card {
+  padding: 25px 20px;
+}
+.characteristic-icon,
+.potential-icon {
+  width: 60px;
+  height: 60px;
+}
+.characteristic-icon i,
+.potential-icon i {
+  font-size: 28px;
+}
+.cta-title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.cta-description {
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+@media screen and (max-width: 360px) {
+  .container { padding: 0 12px; }
+  .hero-title { gap: 8px; }
+  .characteristics-grid,
+  .problem-stats,
+  .problem-details,
+  .potential-grid,
+  .approach-steps,
+  .impact-grid { gap: 20px; }
+  .characteristic-item,
+  .potential-item,
+  .impact-item,
+  .problem-card { padding: 24px; }
+  .stat-item { padding: 36px 28px; }
+  .characteristic-icon,
+  .potential-icon,
+  .impact-icon { width: 56px; height: 56px; }
+  .characteristic-icon i,
+  .potential-icon i { font-size: 26px; }
+  .impact-icon i { font-size: 24px; }
+  .products-cta-section .button-link,
+  .cta-button .button-link { padding: 12px 20px; gap: 8px; }
+}
+.products-cta-section .cta-title {
+  font-size: clamp(24px, 3.2vw, 30px);
+  margin-bottom: 8px;
+  grid-column: 1 / -1;
+}
+.products-cta-section .cta-description {
+  font-size: clamp(16px, 2.2vw, 17px);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.products-cta-section .cta-button { margin-top: 0; justify-self: end; }
+.contact-cta-section .cta-content {
+  max-width: clamp(520px, 76vw, 680px);
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+  row-gap: 8px;
+  align-items: center;
+}
+.contact-cta-section .cta-title {
+  font-size: clamp(24px, 3.2vw, 30px);
+  margin-bottom: 8px;
+  grid-column: 1 / -1;
+}
+.contact-cta-section .cta-description {
+  font-size: clamp(16px, 2.2vw, 17px);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.contact-cta-section .cta-hours { margin-bottom: 0; }
+.contact-cta-section .cta-button { margin-top: 0; justify-self: end; }
+.contact-cta-section .button-link { padding: 12px 22px; border-radius: 10px; }
+
+/* Responsive compaction */
+@media screen and (max-width: 640px) {
+  .products-cta-section .cta-content,
+  .contact-cta-section .cta-content {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+  }
+  .products-cta-section .cta-button,
+  .contact-cta-section .cta-button {
+    justify-self: start;
+    margin-top: 12px;
   }
 }

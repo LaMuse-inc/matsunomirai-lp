@@ -166,7 +166,13 @@ margin-top: 15px;
   color: #0D6EFF;
 }
 
+:root {
+  --blue-600: #0D6EFF;
+  --green-500: #20C997;
+}
 
+.policy-link { color: var(--blue-600); }
+.policy-accent { color: var(--green-500); }
 
 /* contact */
 
