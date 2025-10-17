@@ -92,7 +92,7 @@ body {
 
 .hero-ja {
   display: block;
-  font-family: "Dela Gothic One", cursive;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: clamp(32px, 5vw, 64px);
   font-weight: 700;
   color: var(--white);
@@ -146,6 +146,7 @@ body {
     transparent 0
   );
   box-decoration-break: clone;
+  margin-bottom: 3em;
 }
 
 /* Product Overview Section */
@@ -796,7 +797,7 @@ body {
 .cta-title {
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 3em;
   display: inline;
   /* 他のマーカー（title-ja）と同じ厚みに統一 */
   --marker-thickness: 0.15em;

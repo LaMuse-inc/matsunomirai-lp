@@ -52,18 +52,62 @@
   </header>
 
   <main>
-    <section class="form-embed-section">
-      <div class="form-embed-wrapper">
-        <h1 class="form-embed-title">お問い合わせフォーム</h1>
-        <!-- Googleフォームの完全同一構成を埋め込み -->
-        <iframe class="form-embed" title="お問い合わせフォーム"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform?embedded=true"
-          frameborder="0" marginheight="0" marginwidth="0" allow="encrypted-media" referrerpolicy="no-referrer-when-downgrade">読み込み中…</iframe>
-        <p class="form-embed-fallback">
-          フォームが表示されない場合は
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/viewform" target="_blank" rel="noopener">こちら</a>
-          からお開きください。
-        </p>
+    <section class="contact-form-section">
+      <div class="contact-content">
+        <div class="contact-form-container">
+          <h1 class="form-title">フォームでのお問い合わせ</h1>
+          <p class="form-description">下記フォームにご入力いただき、送信してください。内容を確認次第、ご連絡いたします。</p>
+
+          <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe4_FKWahFu5rCBJLXhDaqLk6PONpvC-627uWRltZsqo7H2gw/formResponse" method="POST" target="_blank">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">お名前 <span class="required">*</span></label>
+                <input type="text" id="name" name="entry.2005620554" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="email" name="entry.1045781291" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">電話番号</label>
+                <input type="tel" id="phone" name="entry.1166974658" class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">お問い合わせ種別 <span class="required">*</span></label>
+                <select id="subject" name="entry.839337160" class="form-input" required>
+                  <option value="">選択してください</option>
+                  <option value="製品について">製品について</option>
+                  <option value="購入について">購入について</option>
+                  <option value="事業について">事業について</option>
+                  <option value="取材・メディア">取材・メディア</option>
+                  <option value="その他">その他</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">お問い合わせ内容 <span class="required">*</span></label>
+              <textarea id="message" name="entry.1677159064" class="form-textarea" rows="6" placeholder="具体的なお問い合わせ内容をご記入ください" required></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy" class="checkbox-label">
+                <a href="personal.html" target="_blank">プライバシーポリシー</a>に同意します <span class="required">*</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i>
+                送信する
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
